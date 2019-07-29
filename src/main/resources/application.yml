@@ -1,0 +1,19 @@
+# server 配置
+server:
+  servlet:
+    context-path: /
+  port: 60419
+  tomcat:
+    uri-encoding: UTF-8
+    # 加大tomcat最大连接数, 这里给400
+    accept-count: 500
+    max-threads: 500
+    max-connections: 500
+spring:
+  application:
+    name: hbase-demo-service
+  data:
+    hbase:
+      quorum: hadoop2:2181
+      rootDir: /hbase
+      nodeParent: /hbase
